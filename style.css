@@ -1,0 +1,64 @@
+header {
+            background-image: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/0295d019-b14c-42b1-9606-de45d3468673/bvlatuR/std/0x0/screen3@2_1");
+            background-size: cover;
+            height: 70vh;
+            width: auto;
+        }
+
+  frame{
+            opacity:50;
+        }
+
+  h1{
+	color: #FFFFFF;
+	font-size: 12px;
+	font-family: FreeMono;
+   }
+
+.navbar {
+  box-shadow: 2px 2px 5px #000;
+  opacity: 0.9;
+  color: #DCDCDC;
+}
+
+.nav-item{
+	color: #DCDCDC;
+	font-size: 18px;
+	font-family: FreeMono;
+}
+
+.navbarNav{
+	color: #DCDCDC;
+	font-size: 18px;
+	font-family: FreeMono;
+}
+
+.navbar-brand{
+	color: #fff;
+	box-shadow: none;
+}
+
+
+
+.form-control, .btn{
+  border-radius: 0;
+}
+
+.team, footer {
+  background: #1C1C1C;
+}
+
+ input[type='button'] 
+        {
+            cursor: pointer;
+            border: none;
+            color: #FFF;
+        }
+        
+  input[type='text'], select 
+        {
+            text-align: center;
+            border: solid 1px #CCC;
+            width: auto;
+            padding: 2px 3px;
+        }
