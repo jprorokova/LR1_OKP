@@ -22,7 +22,7 @@
 
 <body>
     <!-- NAVIGATION -->
-    <section class="sticky-top" style="top: 0px;">
+    <section class="sticky-top" style="top: 0px; color: #DCDCDC;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
 
             <div class="container-fluid" >
@@ -31,7 +31,7 @@
                    <a class="navbar-brand" href="#">
                      <img src="https://cutewallpaper.org/21/tesla-png-logo/Tesla-PNG-and-vectors-for-Free-Download-DLPNG.com.png" height="45" class="d-inline-block align-top" alt="">
                   </a>
-                   <h1 style="color: #DCDCDC;">Tesla Motors</h1>
+                   <h1>Tesla Motors</h1>
                 </nav>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,16 +78,18 @@
                                     Kyiv Tesla Club
                                 </h1>
 
-                                <h1 style="font-size: 18px;"><p class="my-0">
-                                A community of professionals who have one thing in common:</p><p> the desire to make electric vehicles the most popular mode of transport.</p>
+                                <h1 style="font-size: 18px;" class="my-0">
+                                     A community of professionals who have one thing in common:
+                                 </h1>
+                                 <h1 style="font-size: 18px;" class="my-0">
+                                     the desire to make electric vehicles the most popular mode of transport.
+                                 </h1>
 
-                                <!--<a href="link5" class="btn btn-outline-secondary btn-lg my-2">
-                                    Read More
-                                </a>-->
+
                                  <li class="nav-item">
-                            <a class="nav-link text-white" href="#link5"><h1 style=" color: #151515; font-size: 22px; box-shadow: 2px 2px 5px #000;">Read More</h1></a>
-                        </li>
-                            </h1>
+                                    <a class="nav-link text-white" href="#link5"><h1 style=" color: #151515; font-size: 22px; box-shadow: 2px 2px 5px #000;">Read More</h1></a>
+                                </li>
+                            
                             </div>
                         </div>
                     </div>
@@ -533,89 +535,55 @@ Unlike other automakers, Tesla does not use individual large battery cells, but 
                         Write your questions
 
                     </p>
-
-                    <form id="mail-form" action="">
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-user input-group-text"></i>
-                            </div>
-
-                            <!--<input type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">-->
-                            <input id="name" placeholder="Name">
-
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-envelope input-group-text"></i>
-                            </div>
-
-                            <!--<input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">-->
-                            <input id="email" placeholder="Email">
-
-
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <i class="fas fa-pencil-alt input-group-text"></i>
-                            </div>
-
-                           <!-- <textarea name="" cols="30" rows="10" placeholder="Message" class="form-control"></textarea>-->
-                           <input id="message" placeholder="Message">
-
-                        </div>
-
-                        <!--<button type="submit" class="btn btn-primary btn-block">Send</button>-->
-                        <input type="submit" value="Send">
-
-                    </form>
-                    <div id='mail-container'></div>
-
                 </div>
             </div>
         </div>
-
-
-        <!--CRUD-->
-    <script type="text/javascript">
-        "data": [
-    {
-      "name": "Elon Musk",
-      "email": "musk@gmail.com"
-      "message": "What's up with sales?How many cas have already been sold?",
-      "id": 1
-    }
-]
-
-    const mailForm = document.querySelector('#mail-form')
-    mailForm.addEventListener('submit', (e) => {
-     e.preventDefault()
-     // additional functionality goes down here!!
-     const nameInput = mailForm.querySelector('#name').value
-     const emailInput = mailForm.querySelector('#email').value
-     const messageInput = mailForm.querySelector('#message').value
-
-     fetch(`${mailURL}`, {
-      method: 'POST',
-      body: JSON.stringify({
-        title: titleInput,
-        author: authorInput,
-        coverImage: coverImageInput,
-        description: descInput
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
     
-})
-  
-    </script>
 
+                   
+
+
+     <table align="center" width="1000">
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Messege</label>
+                        <input type="text" name="messege" id="messege">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="messegeList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Messege</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
     </section>
 
+    <!--CRUD-->
 
 
     <footer>
